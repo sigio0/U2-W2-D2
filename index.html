@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap ADV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        .card-img-top {
+            /* height: 138px; */
+            aspect-ratio: 16/10;
+            object-fit: cover;
+        }
+
+        .carousel-item img {
+            max-height: 40vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark" data-bs-theme="dark">
+        <div class="container-md">
+            <a class="navbar-brand" href="#">Epicode</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active new-color" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    elimina
+                </button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    aggiungi
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+                <img src="https://images.unsplash.com/photo-1710170600859-88aa710aefc1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="https://images.unsplash.com/photo-1699389359830-7b49eac067ad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="500">
+                <img src="https://images.unsplash.com/photo-1699389359817-6d17d0880c2f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div class="container-md">
+        <div class="alert alert-success alert-dismissible fade show mt-3 rounded-0 border-0 fs-2 text-success"
+            role="alert">
+            A simple success alert—check it out!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <h1 class="bg-info text-center mb-0" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+            data-bs-content="Top popover">Componenti Bootstrap 5.3.3</h1>
+
+        <img src="https://images.unsplash.com/photo-1711539925041-c94ababfb763?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="" class="img-fluid" data-bs-toggle="collapse" data-bs-target="#paragraph-collapse">
+
+        <button class="btn btn-primary d-block w-100 mt-3" data-bs-toggle="collapse"
+            data-bs-target="#paragraph-collapse">button collapse</button>
+
+        <a class="btn btn-primary d-block w-100 mt-3" href="#paragraph-collapse" data-bs-toggle="collapse">link
+            collapse</a>
+
+        <div class="collapse show" id="paragraph-collapse">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis ut, distinctio qui eligendi
+                consectetur officiis porro! Officia ea inventore facilis delectus quasi. Dolorem, provident placeat esse
+                inventore quibusdam magnam eos?
+                Et aliquam autem, labore minus adipisci molestias exercitationem. Mollitia, expedita. Ex velit ea
+                explicabo hic quia, molestiae, nam recusandae et atque cum assumenda modi ratione doloribus, itaque
+                asperiores error placeat!
+                Repudiandae qui consequuntur vero libero dolore eum autem! Saepe maiores cum a exercitationem obcaecati.
+                Eos doloremque voluptatibus, nihil laboriosam neque reiciendis quod ullam repellendus tenetur illo
+                error. Officia, nulla numquam!</p>
+        </div>
+
+        <h4>Griglia di card</h4>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 gx-2 gy-3 mb-5">
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1711923236198-4ae03a28e436?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Default tooltip"
+                            data-bs-placement="right">Go
+                            somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1710170600859-88aa710aefc1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Default tooltip"
+                            data-bs-placement="bottom">Go
+                            somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1710170600859-88aa710aefc1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Default tooltip">Go
+                            somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1711923236198-4ae03a28e436?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Default tooltip"
+                            data-bs-placement="left">Go
+                            somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Sei sicuro di voler eliminare?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo quas temporibus non minima iusto,
+                    possimus at aut rerum odio suscipit numquam mollitia itaque incidunt cum reiciendis iure molestias
+                    eligendi ex.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                        onclick="console.log('eliminato')">Elimina</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Aggiungi post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo quas temporibus non minima iusto,
+                    possimus at aut rerum odio suscipit numquam mollitia itaque incidunt cum reiciendis iure molestias
+                    eligendi ex.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal"
+                        onclick="console.log('post aggiunto')">Aggiungi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+</body>
+
+</html
